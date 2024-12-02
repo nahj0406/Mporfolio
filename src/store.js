@@ -10,6 +10,12 @@ let naviTitle = createSlice({
 })
 
 
+let loadComponent = createSlice({
+   name : 'loadComponent',
+   initialState : ['stayAni']
+})
+
+
 // i'am...
 // let skillSet = createSlice({
 //    name: 'skillSet',
@@ -43,6 +49,7 @@ export default configureStore({
    reducer: {
       naviTitle : naviTitle.reducer,
       portItem : portItem.reducer,
+      loadComponent : loadComponent.reducer,
       // skillSet : skillSet.reducer,
    }
 })

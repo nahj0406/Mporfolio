@@ -7,6 +7,20 @@ import { gsap } from "gsap";
 
 function Portpolio() {
 
+   let loadComponent = useSelector((state)=> state.loadComponent);
+
+   //페이지 로드 애니메이션
+   let [loadPage, setPage] = useState('');
+
+   useEffect(() => {
+      let loadAni = setTimeout(()=> {setPage('loadPage')}, 100);
+
+      return ()=> {
+         clearTimeout(loadAni);
+         setPage('');
+      }
+   }, []);
+
    useEffect(() => {
       // gsapAni();
 
@@ -32,7 +46,7 @@ function Portpolio() {
    let portItem = useSelector((state)=> state.portItem);
 
    return (
-      <div id="pot_body" className='body_sty'>
+      <div id="pot_body" className={`body_sty ${loadComponent} ${loadPage}`}>
          <section className="sec1">
             <div className="canvasBox">
                <canvas id='planit_ik'></canvas>

@@ -85,6 +85,15 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 
 /* navigater ------------------------------- */
 
+/* 컴포넌트 전환 애니메이션 */
+.stayAni {
+	opacity: 0;
+}
+/* active */
+.loadPage {opacity: 1; transition: opacity 1s 0.3s;}
+
+
+
 
 /* intro_body 메인 페이지 ------------------------------- */
 #intro_body {
