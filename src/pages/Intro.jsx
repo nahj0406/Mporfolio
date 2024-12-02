@@ -37,6 +37,54 @@ function Intro() {
             <span id='text'></span>
             <span className='cursor'></span>
          </p>
+
+         <img className="int_name" src="./img/@intro_name_img.png" alt="이름" />
+         <img className="rocket" src="./img/@intro_rocket.png" alt="로켓" />
+
+         <div className="textBox">
+            <h2 className="rubik">
+               <b>w</b>eb <br />
+               portpolio
+            </h2>
+            <h5 className="rubik">2024</h5>
+         </div>
+
+         <p className="ip_address DGMo">
+            <span id='text'></span>
+            <span className='cursor'></span>
+         </p>
+
+         <img className="int_name" src="./img/@intro_name_img.png" alt="이름" />
+         <img className="rocket" src="./img/@intro_rocket.png" alt="로켓" />
+
+         <div className="textBox">
+            <h2 className="rubik">
+               <b>w</b>eb <br />
+               portpolio
+            </h2>
+            <h5 className="rubik">2024</h5>
+         </div>
+
+         <p className="ip_address DGMo">
+            <span id='text'></span>
+            <span className='cursor'></span>
+         </p>
+
+         <img className="int_name" src="./img/@intro_name_img.png" alt="이름" />
+         <img className="rocket" src="./img/@intro_rocket.png" alt="로켓" />
+
+         <div className="textBox">
+            <h2 className="rubik">
+               <b>w</b>eb <br />
+               portpolio
+            </h2>
+            <h5 className="rubik">2024</h5>
+         </div>
+
+         <p className="ip_address DGMo">
+            <span id='text'></span>
+            <span className='cursor'></span>
+         </p>
       </div>
    )
 }

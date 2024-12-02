@@ -8,7 +8,7 @@ import { gsap } from "gsap";
 function Portpolio() {
 
    useEffect(() => {
-      gsapAni();
+      // gsapAni();
 
       const planitDraw = () => {
          const canvas = document.getElementById('planit_ik');

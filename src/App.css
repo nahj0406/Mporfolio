@@ -29,7 +29,7 @@ body {margin: 0; padding: 0;}
 a {text-decoration: none;}
 h1,h2,h3,h4,h5,p,span,b,strong {margin: 0; padding: 0;}
 #root {width: 100%;}
-.App {width: 100%; min-height: 100vh; position: relative; overflow: hidden;}
+.App {width: 100%; position: relative; overflow: hidden;}
 .App::before {
 	content:""; position: absolute;
 	z-index: -2; width: 100%; height: 100%; top: 0; left: 0;
@@ -41,6 +41,7 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 .nightsky {
 	position: absolute; top: 0; left: 50%;
 	z-index: -1; transform: translateX(-50%);
+	display: block;
 }
 
 /* 페이지 규격 */
@@ -87,7 +88,7 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 
 /* intro_body 메인 페이지 ------------------------------- */
 #intro_body {
-	width: 100%; height: 100vh;
+	width: 100%; height: 100%;
 	display: flex; flex-direction: column;
 	align-items: center; justify-content: center;
 	position: relative;
