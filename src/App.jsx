@@ -1,8 +1,8 @@
 //* eslint-disable */
 // 유효성 검사 무시용
 /* eslint-disable react/prop-types */
-// import {lazy, Suspense} from 'react';
-// Suspense, useEffect, useState
+import {Suspense} from 'react';
+// Suspense, useEffect, useState lazy
 import {Routes, Route, Link} from 'react-router-dom'
 // Link, useNavigate
 import {useSelector } from 'react-redux'
@@ -15,7 +15,7 @@ import NightSky from './js/Nightsky.jsx'
 
 function App() {
 
-	// redux 변수
+	// redux 변수 - 네비탭용
 	let naviTitle = useSelector((state)=> state.naviTitle)
 
 	return (
@@ -23,8 +23,9 @@ function App() {
 			<NightSky></NightSky>
 			<Routes>
 				<Route path="/" element={
-					<Intro></Intro>
-
+					<Suspense fallback={<div>로딩중!</div>}>
+						<Intro></Intro>
+					</Suspense>
 					
 
 				} />
@@ -34,7 +35,9 @@ function App() {
 				} /> */}
 
 				<Route path="/portpolio" element={
-					<Portpolio></Portpolio>
+					<Suspense fallback={<div>로딩중!</div>}>
+						<Portpolio></Portpolio>
+					</Suspense>
 				} />
 			</Routes>
 
