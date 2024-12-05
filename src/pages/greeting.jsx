@@ -91,7 +91,6 @@ function Skill_list({skill, i}) {
    return (
       <li>
          <div className='chart_box'>
-            <canvas className='circle_cht' data-percent={skill.percent}></canvas>
             <figure className='img'>
                <img src={`./img/@skill_logo_${skill_count}.png`} alt={skill.title} />
             </figure>

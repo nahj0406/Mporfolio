@@ -9,7 +9,7 @@ import {useSelector } from 'react-redux'
 // useDispatch
 import './App.css'
 import Intro from './pages/Intro.jsx'
-// import Greeting from './pages/greeting.jsx'
+import Greeting from './pages/greeting.jsx'
 import Portpolio from './pages/portpolio.jsx'
 import NightSky from './js/Nightsky.jsx'
 
@@ -24,19 +24,19 @@ function App() {
 			<Routes>
 				<Route path="/" element={
 					<Suspense fallback={<div>로딩중!</div>}>
-						<Intro></Intro>
+						<>
+							<Intro></Intro>
+							<Greeting></Greeting>
+						</>
 					</Suspense>
 					
 
 				} />
 
-				{/* <Route path="/greeting" element={
-					<Greeting naviTitle={naviTitle}></Greeting>
-				} /> */}
-
 				<Route path="/portpolio" element={
 					<Suspense fallback={<div>로딩중!</div>}>
 						<Portpolio></Portpolio>
+						<Greeting></Greeting>
 					</Suspense>
 				} />
 			</Routes>

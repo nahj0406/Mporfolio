@@ -17,21 +17,21 @@ let loadComponent = createSlice({
 
 
 // i'am...
-// let skillSet = createSlice({
-//    name: 'skillSet',
-//    initialState : [
-//       {title : 'html5', percent: 95},
-//       {title : 'css3', percent: 95},
-//       {title : 'javascript', percent: 70},
-//       {title : 'jquery', percent: 85},
-//       {title : 'react', percent: 50},
-//       {title : 'redux', percent: 60},
-//       {title : 'php', percent: 70},
-//       {title : 'bootstrap', percent: 90},
-//       {title : 'photoshop', percent: 60},
-//       {title : 'illustrator', percent: 30}
-//    ]
-// })
+let skillSet = createSlice({
+   name: 'skillSet',
+   initialState : [
+      {title : 'html5', percent: 95},
+      {title : 'css3', percent: 95},
+      {title : 'javascript', percent: 70},
+      {title : 'jquery', percent: 85},
+      {title : 'react', percent: 50},
+      {title : 'redux', percent: 60},
+      {title : 'php', percent: 70},
+      {title : 'bootstrap', percent: 90},
+      {title : 'photoshop', percent: 60},
+      {title : 'illustrator', percent: 30}
+   ]
+})
 
 let portItem = createSlice({
    name : 'portItem',
@@ -50,6 +50,6 @@ export default configureStore({
       naviTitle : naviTitle.reducer,
       portItem : portItem.reducer,
       loadComponent : loadComponent.reducer,
-      // skillSet : skillSet.reducer,
+      skillSet : skillSet.reducer,
    }
 })
