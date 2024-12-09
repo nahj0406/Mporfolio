@@ -46,7 +46,7 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 
 /* 페이지 규격 */
 .containerV1 {
-	width: 100%; max-width: 1000px;
+	width: 100%; max-width: 1200px;
 	margin: 0 auto; position: relative;
 }
 
@@ -90,8 +90,9 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 
 
 
+/* ###### MAIN	STYLE #########################################*/
 
-/* intro_body 메인 페이지 ------------------------------- */
+/* intro_body 메인 인트로 ------------------------------- */
 #intro_body {
 	width: 100%; height: 100vh;
 	display: flex; flex-direction: column;
@@ -155,9 +156,9 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 
 
 
-/* gr_body i'am 페이지 ----------------------------------- */
+/* main 자기소개 ----------------------------------- */
 
-
+/* comment 상자 스타일 */
 .ComtBox {
 	background: rgb(8 8 10 / 0.8);
 	border-radius: 20px; text-align: center;
@@ -174,12 +175,15 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 
 #gr_body {padding-top: 18rem;}
 
+
+
+/* sec1 */
 #gr_body .sec1 {
 	width: 100%; padding: 8.5rem 15px 9.5rem;
 	margin-bottom: 20.9rem;
 }
 
-#gr_body .sec1 > h2 {
+#gr_body .sec1 .comt_unit_1 > h2 {
 	text-transform: uppercase;
 	font-size: 6.5rem; font-weight: 500;
 	line-height: 1.1; margin-bottom: 2.5rem;
@@ -187,6 +191,8 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 }
 
 
+
+/* sec2 skill */
 #gr_body .sec2 .skill_list {
 	display: grid; grid-template-columns: repeat(4, 1fr);
 	grid-auto-rows: minmax(11rem, auto);
@@ -241,6 +247,13 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 /* gr_body end ------------------------------- */
 
 
+/* ###### MAIN	STYLE END #########################################*/
+
+
+
+
+/* ###### PORTFOLIO STYLE #########################################*/
+
 /* pot_body -------------------------------------*/
 #pot_body {position: relative;}
 #pot_body .sec1 {
@@ -265,3 +278,6 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 
 
 /* pot_body end -------------------------------- */
+
+
+/* ###### PORTFOLIO STYLE END #########################################*/

@@ -35,16 +35,18 @@ function Greeting() {
       <div id="gr_body" className='body_sty'>
          {/* <section className="containerV1"> */}
             <article className="sec1 ComtBox containerV1">
-               <h2 className='rubik'>
-                  Thank you for <br /> visiting my Portfolio!
-               </h2>
-
-               <p className="text1 DGMo">
-                  안녕하세요! 웹퍼블리셔 나현종이라고 합니다. <br />
-                  저는 약 2년 9개월 정도 코딩 우주에서의 항해를 계속하고 있으며 <br />
-                  현재는 프론트엔드와 인터렉티브앱에 대해서 관심을 가지고 <br />
-                  드넓은 우주같은 코딩의 바다를 떠돌고 있습니다!
-               </p>
+               <div className="comt_unit_1">
+                  <h2 className='rubik'>
+                     Thank you for <br /> visiting my Portfolio!
+                  </h2>
+   
+                  <p className="text1 DGMo">
+                     안녕하세요! 웹퍼블리셔 나현종이라고 합니다. <br />
+                     저는 현재 2년 9개월간 코딩 항해를 계속하고 있으며 <br />
+                     현재는 프론트엔드와 인터렉티브앱에 대해서 관심을 가지고 <br />
+                     드넓은 우주같은 코딩의 바다를 떠돌고 있습니다!
+                  </p>
+               </div>
             </article>
 
             <article className="sec2 containerV1">
@@ -95,7 +97,6 @@ function Skill_list({skill, i}) {
                <img src={`./img/@skill_logo_${skill_count}.png`} alt={skill.title} />
             </figure>
          </div>
-         <span className='data-percent'>{skill.percent}</span>
          <h4 className='rubik'>{skill.title}</h4>
       </li>
    )
