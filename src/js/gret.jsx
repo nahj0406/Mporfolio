@@ -1,6 +1,51 @@
-import { useEffect } from "react";
+/* eslint-disable */
+import { useEffect, useLayoutEffect  } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-function useGret() {
+
+export function useComtBox() {
+   useEffect(() => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      ScrollTrigger.create({
+         trigger: '#gr_body .sec1',
+         start: '-200px top',
+         end: '+=1500',
+         pin: true, // 섹션 고정
+         markers: true, // 디버그용 마커 표시
+      });
+     
+       // Timeline 생성
+      const timeline = gsap.timeline({
+         scrollTrigger: {
+            trigger: '#gr_body .sec1',
+            start: '-200px top',
+            end: '+=100',
+            scrub: 1, // 스크롤과 동기화
+            markers: true, // 디버그용 마커
+         },
+      });
+     
+      // from 애니메이션 추가
+      timeline
+         .fromTo(
+            '#gr_body .sec1 .comt_unit_1',
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1 }
+         )
+
+      return () => {
+         // ScrollTrigger와 타임라인 정리
+         ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+         timeline.kill();
+      };
+   }, []);
+}
+
+
+export function useGret() {
    useEffect(() => {
 
       // 행성 애니메이션
@@ -98,6 +143,4 @@ function useGret() {
    }, []);
 
 }
-
-export default useGret;
 

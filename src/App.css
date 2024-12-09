@@ -181,6 +181,7 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 #gr_body .sec1 {
 	width: 100%; padding: 8.5rem 15px 9.5rem;
 	margin-bottom: 20.9rem;
+	/* overflow: hidden; */
 }
 
 #gr_body .sec1 .comt_unit_1 > h2 {

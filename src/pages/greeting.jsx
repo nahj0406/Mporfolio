@@ -2,7 +2,7 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import {useSelector } from 'react-redux'
-import useGret from '../js/gret.jsx'; // 전용 js 파일
+import { useGret, useComtBox } from '../js/gret.jsx'; // 전용 js 파일
 
 function Greeting() {
 
@@ -10,6 +10,7 @@ function Greeting() {
    let naviTitle = useSelector((state)=> state.naviTitle);
    let skillSet = useSelector((state)=> state.skillSet);
    
+   useComtBox();
    useGret();
 
    let [행성갯수, 행성갯수변경] = useState(3);
