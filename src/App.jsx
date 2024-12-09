@@ -1,22 +1,26 @@
 //* eslint-disable */
 // 유효성 검사 무시용1
 /* eslint-disable react/prop-types */
-import {Suspense} from 'react';
-// Suspense, useEffect, useState lazy
-import {Routes, Route, Link} from 'react-router-dom'
+import {Suspense, useState, useEffect} from 'react';
+// lazy
+import {Routes, Route, Link, useLocation} from 'react-router-dom'
 // Link, useNavigate
-import {useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 // useDispatch
 import './App.css'
 import Intro from './pages/Intro.jsx'
 import Greeting from './pages/greeting.jsx'
-import Portpolio from './pages/portpolio.jsx'
+import Portfolio from './pages/portfolio.jsx'
 import NightSky from './js/Nightsky.jsx'
 
 function App() {
 
 	// redux 변수 - 네비탭용
 	let naviTitle = useSelector((state)=> state.naviTitle)
+
+	// useEffect(() => {
+	// 	액티브업셋('active');
+	// }, []);
 
 	return (
 		<div className='App'>
@@ -33,10 +37,9 @@ function App() {
 
 				} />
 
-				<Route path="/portpolio" element={
+				<Route path="/portfolio" element={
 					<Suspense fallback={<div>로딩중!</div>}>
-						<Portpolio></Portpolio>
-						<Greeting></Greeting>
+						<Portfolio></Portfolio>
 					</Suspense>
 				} />
 			</Routes>
@@ -47,18 +50,28 @@ function App() {
 }
 
 function Navigater({ naviTitle }) {
-
-	// const navigate = useNavigate();
-
+	const location = useLocation();
+ 
+	const Links = [
+	  { to: '/' },
+	  { to: '/portfolio' },
+	  { to: '/github' },
+	];
+ 
 	return (
-		<div id="Navi">
-			<Link className='DGMo' to="/"><span>{naviTitle[0]}</span></Link>
-			{/* <Link className='DGMo' onClick={()=> {navigate('/pages/greeting')}}><span>I&#39;AM...</span></Link> */}
-			{/* <Link className='DGMo' to="/greeting"><span>{naviTitle[1]}</span></Link> */}
-			<Link className='DGMo' to="/portpolio"><span>{naviTitle[1]}</span></Link>
-			<Link className='DGMo' to="/github"><span>{naviTitle[2]}</span></Link>
-		</div>
-	)
-}
+	  <div id="Navi">
+		 {naviTitle.map((title, i) => {
+			// 현재 경로와 to 값 비교
+			const isActive = location.pathname === Links[i].to ? 'active' : '';
+ 
+			return (
+			  <Link key={i} className={`DGMo ${isActive}`} to={Links[i].to}>
+				 <span>{title}</span>
+			  </Link>
+			);
+		 })}
+	  </div>
+	);
+ }
 
 export default App

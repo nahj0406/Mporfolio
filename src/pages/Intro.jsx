@@ -14,26 +14,26 @@ function Intro() {
    let [loadPage, setPage] = useState('');
 
    // 타이핑
-   const [위치좌표, 좌표수정] = useState("123.456.789"); // 위치좌표 상태
-   const [delayPassed, setDelayPassed] = useState(false);
+   // const [위치좌표, 좌표수정] = useState("123.456.789"); // 위치좌표 상태
+   // const [delayPassed, setDelayPassed] = useState(false);
 
    useEffect(() => {
 
       let loadAni = setTimeout(()=> {setPage('loadPage')}, 100);
 
 
-      const delayTimeout = setTimeout(() => {
-         setDelayPassed(true);
-      }, 1000);
+      // const delayTimeout = setTimeout(() => {
+      //    setDelayPassed(true);
+      // }, 1000);
 
       return () => {
          clearTimeout(loadAni);
          setPage('');
-         clearTimeout(delayTimeout);
+         // clearTimeout(delayTimeout);
       }
    }, []);
    
-   useTypeWriter(위치좌표, delayPassed);
+   // useTypeWriter(위치좌표, delayPassed);
    return (
       <div id="intro_body" className={`body_sty ${loadComponent} ${loadPage}`}>
          <img className="int_name" src="./img/@intro_name_img.png" alt="이름" />
@@ -47,10 +47,10 @@ function Intro() {
             <h5 className="rubik">2024</h5>
          </div>
 
-         <p className="ip_address DGMo">
+         {/* <p className="ip_address DGMo">
             <span id='text'></span>
             <span className='cursor'></span>
-         </p>
+         </p> */}
       </div>
    )
 }

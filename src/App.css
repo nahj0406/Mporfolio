@@ -75,13 +75,9 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 	width: fit-content;
 }
 #Navi > a > span {position: relative; z-index: 2;}
-/* #Navi > a::before {
-	content: ''; position: absolute;
-	top: 0; left: 0; width: 100%; height: 100%;
-	background: var(--Y-color); z-index: 1;
-} */
 
-#Navi > a:hover {color: var(--Y-color);}
+#Navi > a.active > span,
+#Navi > a:hover {color: var(--Y-color);} 
 
 /* navigater ------------------------------- */
 

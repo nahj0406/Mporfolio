@@ -5,7 +5,7 @@ import {useSelector } from 'react-redux';
 import gsapAni from '../js/pot';
 import { gsap } from "gsap";
 
-function Portpolio() {
+function Portfolio() {
 
    let loadComponent = useSelector((state)=> state.loadComponent);
 
