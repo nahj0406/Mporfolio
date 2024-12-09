@@ -36,7 +36,7 @@ function Greeting() {
          {/* <section className="containerV1"> */}
             <article className="sec1 ComtBox containerV1">
                <h2 className='rubik'>
-                  Thank you for <br /> visiting my spacecship!
+                  Thank you for <br /> visiting my Portfolio!
                </h2>
 
                <p className="text1 DGMo">

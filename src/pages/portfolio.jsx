@@ -92,4 +92,4 @@ function ListItem({plItem, i}) {
    )
 }
 
-export default Portpolio;
+export default Portfolio;

@@ -42,7 +42,7 @@ function Intro() {
          <div className="textBox">
             <h2 className="rubik">
                <b>w</b>eb <br />
-               portpolio
+               portfolio
             </h2>
             <h5 className="rubik">2024</h5>
          </div>
