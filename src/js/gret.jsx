@@ -37,7 +37,7 @@ export function useComtBox() {
          )
 
       return () => {
-         // ScrollTrigger와 타임라인 정리
+         // ScrollTrigger와 타임라인 정리(중복 내용 예상하고 forEach 작업)
          ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
          timeline.kill();
       };
