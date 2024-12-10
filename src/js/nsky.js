@@ -40,7 +40,7 @@ export function render(ctx, width, height, stars) {
   function drawFrame() {
     const gradient = ctx.createLinearGradient(0, 0, 0, height);
     gradient.addColorStop(0, "#000");
-    gradient.addColorStop(1, "#111");
+    gradient.addColorStop(1, "#000");
     // 1b1b1b 00111e 0a2342
 
     ctx.fillStyle = gradient;

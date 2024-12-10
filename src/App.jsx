@@ -1,5 +1,5 @@
 //* eslint-disable */
-// 유효성 검사 무시용1
+// 유효성 검사 무시용
 /* eslint-disable react/prop-types */
 import {Suspense, useState, useEffect} from 'react';
 // lazy
