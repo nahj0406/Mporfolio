@@ -29,12 +29,12 @@ body {margin: 0; padding: 0;}
 a {text-decoration: none;}
 h1,h2,h3,h4,h5,p,span,b,strong {margin: 0; padding: 0;}
 #root {width: 100%;}
-.App {width: 100%; position: relative; overflow: hidden;}
-.App::before {
+.App {width: 100%; position: relative; overflow: hidden; background: #000;}
+/* .App::before {
 	content:""; position: absolute;
 	z-index: -2; width: 100%; height: 100%; top: 0; left: 0;
 	background: linear-gradient(#000, #111);
-}
+} */
 ul,ol,li {list-style: none; padding: 0; margin: 0;}
 
 /* 밤하늘 */
@@ -160,8 +160,10 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 
 /* comment 상자 스타일 */
 .ComtBox {
-	background: rgb(8 8 10 / 0.8);
-	border-radius: 20px; text-align: center;
+	--bg : rgb(8 8 10 / 0.8);
+	--br : 20px;
+	background: var(--bg);
+	border-radius: var(--br); text-align: center;
 }
 
 .Comt__ty1 {
@@ -180,10 +182,16 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 /* sec1 */
 #gr_body .sec1 {
 	width: 100%; padding: 8.5rem 15px 9.5rem;
-	margin-bottom: 20.9rem;
-	/* overflow: hidden; */
+	margin: 0 auto 20.9rem; position: relative;
+	overflow: hidden; background: none; border-radius: unset;
 }
 
+#gr_body .sec1 .bg_box {
+	position: absolute; top: 50%; left: 50%;
+	transform: translate(-50%, -50%); width: 100%; height: 100%;
+	z-index: 1; background: var(--bg); border-radius: var(--br);
+} 
+#gr_body .sec1 .comt_unit_1 {position: relative; z-index: 2;}
 #gr_body .sec1 .comt_unit_1 > h2 {
 	text-transform: uppercase;
 	font-size: 6.5rem; font-weight: 500;
@@ -192,39 +200,9 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 }
 
 
-
-/* sec2 skill */
-#gr_body .sec2 .skill_list {
-	display: grid; grid-template-columns: repeat(4, 1fr);
-	grid-auto-rows: minmax(11rem, auto);
-	justify-items: center; gap: 7rem;
-}
-
-#gr_body .sec2 .skill_list > li {
-	display: flex; align-items: center;
-	flex-direction: column; gap: 6rem;
-}
-
-#gr_body .sec2 .skill_list > li .chart_box {position: relative;}
-
-#gr_body .sec2 .skill_list > li .img {
-	min-height: 7rem; display: flex; z-index: 3;
-	align-items: center; justify-content: center;
-}
-
-#gr_body .sec2 .skill_list > li .img img {width: 45%;}
-
-#gr_body .sec2 .skill_list > li > h4 {
-	color: #fff; text-transform: uppercase;
-	font-size: max(15px, 1.8rem); letter-spacing: 2px;
-}
-
-
-
-
-
-#gr_body .sec3 {margin-top: 17rem; overflow: hidden;}
-#gr_body .sec3 .planit_wrap {
+/* 행성 */
+#gr_body .sec2 {margin-top: 17rem; overflow: hidden;}
+#gr_body .sec2 .planit_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,13 +213,45 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
   overflow: hidden;
 }
 
-#gr_body .sec3 .planit {display: block; margin: 0 auto;}
+#gr_body .sec2 .planit {display: block; margin: 0 auto;}
 
-#gr_body .sec3 .days {
+#gr_body .sec2 .days {
 	font-size: 4rem; color: #fff;
 	font-weight: 500; line-height: 1.2;
 	text-align: center; margin: 4rem 0 3rem;
 }
+
+
+/* sec2 skill */
+#gr_body .sec3 .skill_list {
+	display: grid; grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: minmax(11rem, auto);
+	justify-items: center; gap: 7rem;
+}
+
+#gr_body .sec3 .skill_list > li {
+	display: flex; align-items: center;
+	flex-direction: column; gap: 6rem;
+}
+
+#gr_body .sec3 .skill_list > li .chart_box {position: relative;}
+
+#gr_body .sec3 .skill_list > li .img {
+	min-height: 7rem; display: flex; z-index: 3;
+	align-items: center; justify-content: center;
+}
+
+#gr_body .sec3 .skill_list > li .img img {width: 45%;}
+
+#gr_body .sec3 .skill_list > li > h4 {
+	color: #fff; text-transform: uppercase;
+	font-size: max(15px, 1.8rem); letter-spacing: 2px;
+}
+
+
+
+
+
 
 
 

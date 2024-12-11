@@ -36,6 +36,7 @@ function Greeting() {
       <div id="gr_body" className='body_sty'>
          {/* <section className="containerV1"> */}
             <article className="sec1 ComtBox containerV1">
+               <div className="bg_box"></div>
                <div className="comt_unit_1">
                   <h2 className='rubik'>
                      Thank you for <br /> visiting my Portfolio!
@@ -50,19 +51,7 @@ function Greeting() {
                </div>
             </article>
 
-            <article className="sec2 containerV1">
-               <ul className="skill_list">
-                  {
-                     skillSet.map(function(a, i) {
-                        return (
-                           <Skill_list key={i} i={i} skill ={a}></Skill_list>
-                        )
-                     })
-                  }
-               </ul>
-            </article>
-
-            <article className="sec3">
+            <article className="sec2">
                <div className="planit_wrap">
                   {
                      Array(행성갯수).fill().map(function(_, i) {
@@ -72,6 +61,18 @@ function Greeting() {
                      })
                   }
                </div>
+            </article>
+
+            <article className="sec3 containerV1">
+               <ul className="skill_list">
+                  {
+                     skillSet.map(function(a, i) {
+                        return (
+                           <Skill_list key={i} i={i} skill ={a}></Skill_list>
+                        )
+                     })
+                  }
+               </ul>
             </article>
 
 

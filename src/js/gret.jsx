@@ -12,28 +12,47 @@ export function useComtBox() {
       ScrollTrigger.create({
          trigger: '#gr_body .sec1',
          start: '-200px top',
-         end: '+=1500',
+         end: '+=600',
          pin: true, // 섹션 고정
          markers: true, // 디버그용 마커 표시
+         // onLeave: () => {
+         //    // end 지점에서 실행할 애니메이션
+         //    gsap.to('#gr_body .sec1 .bg_box', { backgroundColor: 'red', duration: 1 });
+         // },
       });
      
-       // Timeline 생성
-      const timeline = gsap.timeline({
-         scrollTrigger: {
-            trigger: '#gr_body .sec1',
-            start: '-200px top',
-            end: '+=100',
-            scrub: 1, // 스크롤과 동기화
-            markers: true, // 디버그용 마커
-         },
-      });
-     
+      // Timeline 생성
+      const timeline = gsap.timeline();
+      
       // from 애니메이션 추가
       timeline
          .fromTo(
+            '#gr_body .sec1 .bg_box',
+            { width: 0},
+            { 
+               width: '100%', duration: 1.5,
+               scrollTrigger: {
+                  trigger: '#gr_body .sec1',
+                  start: 'top center',
+                  end: '+=200',
+                  scrub: 1, // 스크롤과 동기화
+                  markers: true, // 디버그용 마커
+               },
+            }
+         )
+         .fromTo(
             '#gr_body .sec1 .comt_unit_1',
             { y: 50, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1 }
+            { 
+               y: 0, opacity: 1, duration: 1,
+               scrollTrigger: {
+                  trigger: '#gr_body .sec1',
+                  start: '-200px top',
+                  end: '+=200',
+                  scrub: 1, // 스크롤과 동기화
+                  markers: true, // 디버그용 마커
+               },
+            }
          )
 
       return () => {

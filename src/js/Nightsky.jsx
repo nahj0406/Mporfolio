@@ -11,6 +11,7 @@ const NightSky = () => {
   useEffect(() => {
     const updateCanvasSize = () => {
       const newWidth = window.innerWidth;
+      // window.innerWidth
       const newHeight = document.body.clientHeight; // body의 높이를 참조
       setCanvasSize({ width: newWidth, height: newHeight });
     };

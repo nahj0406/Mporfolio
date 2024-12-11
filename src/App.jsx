@@ -11,7 +11,7 @@ import './App.css'
 import Intro from './pages/Intro.jsx'
 import Greeting from './pages/greeting.jsx'
 import Portfolio from './pages/portfolio.jsx'
-import NightSky from './js/Nightsky.jsx'
+// import NightSky from './js/Nightsky.jsx'
 import Lenis from '@studio-freight/lenis';
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
 
 	return (
 		<div className='App'>
-			<NightSky></NightSky>
+			{/* <NightSky></NightSky> */}
 			<Routes>
 				<Route path="/" element={
 					<Suspense fallback={<div>로딩중!</div>}>
