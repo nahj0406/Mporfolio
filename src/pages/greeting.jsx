@@ -2,7 +2,7 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import {useSelector } from 'react-redux'
-import { useGret, useComtBox } from '../js/gret.jsx'; // 전용 js 파일
+import { useComtBox } from '../js/gret.jsx'; // 전용 js 파일
 
 function Greeting() {
 
@@ -11,7 +11,6 @@ function Greeting() {
    let skillSet = useSelector((state)=> state.skillSet);
    
    useComtBox();
-   useGret();
 
    let [행성갯수, 행성갯수변경] = useState(3);
    let [체류일자, 체류일변경] = useState(['2020 ~ 2021...', '2022.03 ~ 2024.07...', '2024.07 ~']);
@@ -51,15 +50,57 @@ function Greeting() {
                </div>
             </article>
 
+
             <article className="sec2">
-               <div className="planit_wrap">
-                  {
-                     Array(행성갯수).fill().map(function(_, i) {
-                        return (
-                           <Planit key={i} i={i} 체류일자={체류일자} 행성설명={행성설명}></Planit>
-                        )
-                     })
-                  }
+               <div className="itemBox">
+                  <div id="education">
+                     <article className="planit containerV1">
+                        <figure className="img">
+                           <img src="./img/@planit_01.png" alt="교육" />
+                        </figure>
+
+                        <div className='text_box'>
+                           <div className="label">
+                              <h3 className='DGMo'>그린컴퓨터아카데미</h3>
+                              <span class="">수료</span>
+                              <span class="">2020.10 ~ 2021.02</span>
+                              <span class="">디지털디자인(웹디자이너, 웹퍼블리셔) 양성과정</span>
+                           </div>
+
+                           <div className="ComtBox Comt__ty1">
+                              <p className="text1 DGMo">
+                                 ui/ux디자인을 구성 설계하고, html5, css3, javascript를 활용한 기업형 웹사이트, 모바일 웹, 반응형 웹 페이지
+                                 를 구현하는 교육을 받았습니다. 하지만 이때까진 아직 웹이라는 우주가 얼마나 드넓고 복잡한 것인지
+                                 잘 이해하지 못했습니다...
+                              </p>
+                           </div>
+                        </div>
+                     </article>
+                  </div>
+
+                  <div id="career">
+                     <article className="planit containerV1">
+                        <figure className="img">
+                           <img src="./img/@planit_02.png" alt="교육" />
+                        </figure>
+
+                        <div className='text_box'>
+                           <div className="label">
+                              <h3 className='DGMo'>아이케이 웹에이전시</h3>
+                              <span class="">인수합병으로 인한 사직</span>
+                              <span class="">2022.03 ~ 2024.07</span>
+                              <span class="">퍼블리싱</span>
+                           </div>
+
+                           <div className="ComtBox Comt__ty1">
+                              <p className="text1 DGMo">
+                                 3개월의 수습기간 이후 정규직으로 전환한 뒤 기업, 공공기관, 프렌차이즈 등 여러가지 프로젝트를 
+                                 그누보드를 토대로 메인 퍼블리싱과 그누보드 영카트 쇼핑몰, 약간의 php 개발 등을 함께 맡아 작업하였습니다.
+                              </p>
+                           </div>
+                        </div>
+                     </article>
+                  </div>
                </div>
             </article>
 
@@ -101,28 +142,6 @@ function Skill_list({skill, i}) {
          </div>
          <h4 className='rubik'>{skill.title}</h4>
       </li>
-   )
-}
-
-
-// sec3 component
-function Planit(props) {
-   return (
-      <div id={`Pitem_0${props.i+1}`} className='planit_box'>
-         <div className="unit">
-            <div className="row">
-               <div className="item">
-                  <canvas id={`planit_0${props.i+1}`} className='planit' width="388" height="480"></canvas>
-                  <h3 className="days rubik">{props.체류일자[props.i]}</h3>
-                  <div className="ComtBox Comt__ty1">
-                     <p className="text1 DGMo">
-                        {props.행성설명[props.i]}
-                     </p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
    )
 }
 
