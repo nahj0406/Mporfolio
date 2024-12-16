@@ -24,7 +24,7 @@ function App() {
 		const lenis = new Lenis({
 			smoothWheel: true,
       	smoothTouch: true,
-			wheelMultiplier: 0.5, // 휠 스크롤 속도 감소, 기본값 1
+			wheelMultiplier: 0.3, // 휠 스크롤 속도 감소, 기본값 1
       	touchMultiplier: 2, // 터치 스크롤 속도 증가 기본값 2
 		 });
 

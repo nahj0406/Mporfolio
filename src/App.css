@@ -208,13 +208,26 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 }
 #gr_body .sec2 .planit {position: relative;}
 #gr_body .sec2 .planit .img {
-	margin: 0 0 3rem 12rem;
+	padding-bottom: 17rem;
+	animation: planitMove 0.7s infinite alternate;
+	position: relative; top: 0;
 }
-#gr_body .sec2 .planit .img img {transform: scale(1.3);}
+#gr_body .sec2 #education .img {margin: 0 0 0 21rem;}
+#gr_body .sec2 #career .img {margin: 0 21rem 0 0;}
+#gr_body .sec2 #career .img img {display: block; margin-left: auto;}
+
+@keyframes planitMove {
+	to {top: 10px;}
+}
+
+/* #gr_body .sec2 .planit .img img {transform: scale(1);} */
 #gr_body .sec2 .planit .text_box {
 	max-width: 700px; position: absolute;
 	top: 60%; right: 0;
 }
+
+#gr_body .sec2 #career .text_box {right: unset; left: 50px;}
+
 #gr_body .sec2 .planit .text_box .ComtBox {text-align: left;}
 #gr_body .sec2 .planit .text_box .label {margin-bottom: 2rem;}
 #gr_body .sec2 .planit .text_box .label h3 {

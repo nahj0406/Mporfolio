@@ -21,16 +21,16 @@ export function useComtBox() {
          // },
       });
      
-      // Timeline 생성
-      const timeline = gsap.timeline();
+      // sec1 Timeline 생성
+      const timelineSec1 = gsap.timeline();
       
       // from 애니메이션 추가
-      timeline
+      timelineSec1
          .fromTo(
             '#gr_body .sec1 .bg_box',
             { width: 0},
             { 
-               width: '100%', duration: 1.5,
+               width: '100%',
                scrollTrigger: {
                   trigger: '#gr_body .sec1',
                   start: 'top center',
@@ -44,7 +44,7 @@ export function useComtBox() {
             '#gr_body .sec1 .comt_unit_1',
             { y: 50, opacity: 0 },
             { 
-               y: 0, opacity: 1, duration: 1,
+               y: 0, opacity: 1,
                scrollTrigger: {
                   trigger: '#gr_body .sec1',
                   start: '-200px top',
@@ -55,10 +55,68 @@ export function useComtBox() {
             }
          )
 
+
+      // sec2 Timeline 생성
+      const timelineSec2 = gsap.timeline();
+   
+      timelineSec2
+         .fromTo('#gr_body .sec2 #education .img', 
+            {x: 800,}, 
+            { x: 0,
+               scrollTrigger: {
+                  trigger: '#gr_body .sec2',
+                  start: '-900px top',
+                  end: '+=900',
+                  scrub: 1,
+                  markers: true, // 디버그용 마커
+               },
+             }
+         )
+         .fromTo('#gr_body .sec2 #education .text_box', 
+            { y: 30, opacity: 0}, 
+            { y: 0, opacity: 1,
+               scrollTrigger: {
+                  trigger: '#gr_body .sec2',
+                  start: '-300px top',
+                  end: '+=200',
+                  scrub: 1,
+                  // markers: true, // 디버그용 마커
+               },
+             }
+         )
+         .fromTo('#gr_body .sec2 #career .img', 
+            {x: 800,}, 
+            { x: 0,
+               scrollTrigger: {
+                  trigger: '#gr_body .sec2 #career',
+                  start: '-900px top',
+                  end: '+=800',
+                  scrub: 1,
+                  // markers: true, // 디버그용 마커
+               },
+             }
+         )
+         .fromTo('#gr_body .sec2 #career .text_box', 
+            { y: 30, opacity: 0}, 
+            { y: 0, opacity: 1,
+               scrollTrigger: {
+                  trigger: '#gr_body .sec2 #career',
+                  start: '-400px top',
+                  end: '+=200',
+                  scrub: 1,
+                  markers: true, // 디버그용 마커
+               },
+             }
+         );
+   
+      
+
       return () => {
          // ScrollTrigger와 타임라인 정리(중복 내용 예상하고 forEach 작업)
          ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-         timeline.kill();
+         // ScrollTrigger 및 타임라인 정리
+         timelineSec1.kill();
+         timelineSec2.kill();
       };
    }, []);
 }
