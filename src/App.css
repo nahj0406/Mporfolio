@@ -206,27 +206,23 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 	display: grid; grid-template-columns: repeat(1, 1fr);
 	gap: 30rem;
 }
-#gr_body .sec2 .planit {position: relative;}
+#gr_body .sec2 .planit {position: relative; padding-bottom: 17rem;}
 #gr_body .sec2 .planit .img {
-	padding-bottom: 17rem;
+	position: relative; width: fit-content;
+}
+#gr_body .sec2 .planit .img img {
 	animation: planitMove 0.7s infinite alternate;
 	position: relative; top: 0;
 }
-#gr_body .sec2 #education .img {margin: 0 0 0 21rem;}
-#gr_body .sec2 #career .img {margin: 0 21rem 0 0;}
-#gr_body .sec2 #career .img img {display: block; margin-left: auto;}
+
 
 @keyframes planitMove {
 	to {top: 10px;}
 }
-
-/* #gr_body .sec2 .planit .img img {transform: scale(1);} */
 #gr_body .sec2 .planit .text_box {
 	max-width: 700px; position: absolute;
 	top: 60%; right: 0;
 }
-
-#gr_body .sec2 #career .text_box {right: unset; left: 50px;}
 
 #gr_body .sec2 .planit .text_box .ComtBox {text-align: left;}
 #gr_body .sec2 .planit .text_box .label {margin-bottom: 2rem;}
@@ -239,6 +235,27 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 	padding: 0.5rem; margin-right: 1rem; color: #fff;
 	font-weight: bold; font-size: 1.3rem;
 }
+
+
+/* education */
+#gr_body .sec2 #education .planit .img {left: 20rem;}
+#gr_body .sec2 #education .planit .img img {width: 38rem;}
+
+/* career */
+#gr_body .sec2 #career .planit .img {left: 60rem;}
+#gr_body .sec2 #career .planit .img img {width: 56.2rem;}
+#gr_body .sec2 .planit .img > a {
+	display: block; width: max(25px, 5rem); height: max(25px, 5rem);
+	border-radius: 50%; position: absolute;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#gr_body .sec2 #career .planit .img > #moon-1 {top: 4rem; left: 4rem;}
+#gr_body .sec2 #career .planit .img > #moon-2 {bottom: 5rem; right: 3rem;}
+#gr_body .sec2 #career .planit .img > #moon-3 {top: 0rem; right: 10rem;}
+#gr_body .sec2 #career .text_box {right: unset; left: 8rem;}
+
 
 
 

@@ -3,9 +3,37 @@ import { useEffect, useLayoutEffect  } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { useSelector } from 'react-redux'
 
 
 export function useComtBox() {
+
+   let moonData = useSelector((state)=> state.moonData);
+
+   useEffect(() => {
+      let imgBox = document.querySelector('#career .img');
+
+      if (imgBox) {
+         moonData.forEach((data, index) => {
+            if (['블루웨일브루하우스', '청호불교문화원', '대전문화재단'].includes(data.title)) {
+               // 중복 체크를 위한 고유 ID 설정
+               const uniqueId = `moon-${index+1}`;
+               if (!imgBox.querySelector(`#${uniqueId}`)) {
+                  const moon = document.createElement("a");
+                  moon.href = data.url;
+                  moon.target = "_blank";
+                  moon.rel = "noopener noreferrer";
+                  moon.style.backgroundImage = `url(${data.moonbg})`;
+                  moon.id = uniqueId; // 고유 ID 부여
+                  
+                  imgBox.appendChild(moon);
+               }
+            }
+         });
+      }
+
+   }, []);
+
    useEffect(() => {
       gsap.registerPlugin(ScrollTrigger);
 
@@ -108,8 +136,6 @@ export function useComtBox() {
                },
              }
          );
-   
-      
 
       return () => {
          // ScrollTrigger와 타임라인 정리(중복 내용 예상하고 forEach 작업)

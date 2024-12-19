@@ -10,13 +10,24 @@ let naviTitle = createSlice({
 })
 
 
+// 페이지 전환 애니메이션
 let loadComponent = createSlice({
    name : 'loadComponent',
    initialState : ['stayAni']
 })
 
 
-// i'am...
+
+let moonData = createSlice({
+   name : 'moonData',
+   initialState : [
+      {title : '블루웨일브루하우스', url : 'https://whalebrew.kr/', moonbg :'./img/port_item_01.png'},
+      {title : '청호불교문화원', url : 'http://www.chbuddha.com/', moonbg :'./img/port_item_02.png'},
+      {title : '대전문화재단', url : 'https://seeart.dcaf.or.kr/', moonbg :'./img/moon_logo_dcaf.png'},
+   ]
+})
+
+// main skill...
 let skillSet = createSlice({
    name: 'skillSet',
    initialState : [
@@ -33,6 +44,8 @@ let skillSet = createSlice({
    ]
 })
 
+
+// portpolio item
 let portItem = createSlice({
    name : 'portItem',
    initialState : [
@@ -51,5 +64,6 @@ export default configureStore({
       portItem : portItem.reducer,
       loadComponent : loadComponent.reducer,
       skillSet : skillSet.reducer,
+      moonData : moonData.reducer,
    }
 })

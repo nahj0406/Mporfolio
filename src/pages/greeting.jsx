@@ -62,9 +62,9 @@ function Greeting() {
                         <div className='text_box'>
                            <div className="label">
                               <h3 className='DGMo'>그린컴퓨터아카데미</h3>
-                              <span class="">수료</span>
-                              <span class="">2020.10 ~ 2021.02</span>
-                              <span class="">디지털디자인(웹디자이너, 웹퍼블리셔) 양성과정</span>
+                              <span className="">수료</span>
+                              <span className="">2020.10 ~ 2021.02</span>
+                              <span className="">디지털디자인(웹디자이너, 웹퍼블리셔) 양성과정</span>
                            </div>
 
                            <div className="ComtBox Comt__ty1">
@@ -87,9 +87,9 @@ function Greeting() {
                         <div className='text_box'>
                            <div className="label">
                               <h3 className='DGMo'>아이케이 웹에이전시</h3>
-                              <span class="">인수합병으로 인한 사직</span>
-                              <span class="">2022.03 ~ 2024.07</span>
-                              <span class="">퍼블리싱</span>
+                              <span className="">인수합병으로 인한 사직</span>
+                              <span className="">2022.03 ~ 2024.07</span>
+                              <span className="">퍼블리싱</span>
                            </div>
 
                            <div className="ComtBox Comt__ty1">
