@@ -160,20 +160,37 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 
 /* comment 상자 스타일 */
 .ComtBox {
-	--bg : rgb(8 8 10 / 0.8);
+	--bg : rgb(24 24 24 / 80%);
+	/* --bg : #05713d; */
 	--br : 20px;
 	background: var(--bg);
 	border-radius: var(--br); text-align: center;
-}
-
-.Comt__ty1 {
-	padding: 3.5rem 15px;
 }
 
 .ComtBox .text1 {
 	font-size: 2rem; line-height: 1.5;
 	color: #fff;
 }
+
+.Comt__ty1 {
+	padding: 3.5rem 15px;
+}
+
+.Comt__ty2 {
+	text-align: left; position: relative;
+	/* border-radius: 0 var(--br) var(--br) var(--br); */
+	padding: 4rem 3rem;
+}
+
+.Comt__ty2 > label {
+	font-size: 3.5rem; color: #fff;
+	text-transform: uppercase; font-weight: bold;
+	letter-spacing: 5px; position: absolute; bottom: 100%;
+	background: var(--bg); padding: 5px 10px; left: 3rem;
+   border-radius: 10px 10px 0 0px;
+}
+
+
 
 #gr_body {padding-top: 18rem;}
 
@@ -259,19 +276,20 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 
 
 
-/* sec2 skill */
+/* sec3 */
+
+#gr_body .sec3 .itemBox {margin-bottom: 10rem;}
+
 #gr_body .sec3 .skill_list {
 	display: grid; grid-template-columns: repeat(4, 1fr);
-	grid-auto-rows: minmax(11rem, auto);
-	justify-items: center; gap: 7rem;
+	grid-auto-rows: minmax(8rem, auto);
+	justify-items: center; gap: 3rem;
 }
 
 #gr_body .sec3 .skill_list > li {
 	display: flex; align-items: center;
-	flex-direction: column; gap: 6rem;
+	flex-direction: column; gap: 10px;
 }
-
-#gr_body .sec3 .skill_list > li .chart_box {position: relative;}
 
 #gr_body .sec3 .skill_list > li .img {
 	min-height: 7rem; display: flex; z-index: 3;

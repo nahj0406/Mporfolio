@@ -105,15 +105,22 @@ function Greeting() {
             </article>
 
             <article className="sec3 containerV1">
-               <ul className="skill_list">
-                  {
-                     skillSet.map(function(a, i) {
-                        return (
-                           <Skill_list key={i} i={i} skill ={a}></Skill_list>
-                        )
-                     })
-                  }
-               </ul>
+               <div className="itemBox ComtBox Comt__ty2">
+                  <label htmlFor="" className='rubik'>skill</label>
+                  <ul className="skill_list">
+                     {
+                        skillSet.map(function(a, i) {
+                           return (
+                              <Skill_list key={i} i={i} skill ={a}></Skill_list>
+                           )
+                        })
+                     }
+                  </ul>
+               </div>
+
+               <div className="itemBox ComtBox Comt__ty2">
+
+               </div>
             </article>
 
 
@@ -135,11 +142,9 @@ function Skill_list({skill, i}) {
 
    return (
       <li>
-         <div className='chart_box'>
-            <figure className='img'>
-               <img src={`./img/@skill_logo_${skill_count}.png`} alt={skill.title} />
-            </figure>
-         </div>
+         <figure className='img'>
+            <img src={`./img/@skill_logo_${skill_count}.png`} alt={skill.title} />
+         </figure>
          <h4 className='rubik'>{skill.title}</h4>
       </li>
    )
