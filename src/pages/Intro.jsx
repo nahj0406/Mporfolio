@@ -40,7 +40,7 @@ function Intro() {
          <img className="rocket" src="./img/@intro_rocket.png" alt="로켓" />
 
          <div className="textBox">
-            <h2 className="rubik">
+            <h2 className="Yeongdo">
                <b>w</b>eb <br />
                portfolio
             </h2>

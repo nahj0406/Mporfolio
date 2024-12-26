@@ -5,7 +5,7 @@ import { configureStore, createSlice } from '@reduxjs/toolkit'
 // 공용
 let naviTitle = createSlice({
    name : 'naviTitle',
-   initialState : ['MAIN', 'PORTPOLIO', 'GITHUB']
+   initialState : ['MAIN', 'PORTFOLIO', 'GITHUB']
    // `I'AM...`, 
 })
 

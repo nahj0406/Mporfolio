@@ -1,7 +1,7 @@
 
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-.rubik {font-family: "Rubik", sans-serif;}
+.rubik {font-family: "Rubik", sans-serif !important;}
 
 @font-face {
 	font-family: 'DungGeunMo';
@@ -9,7 +9,16 @@
 	font-weight: normal;
 	font-style: normal;
 }
-.DGMo {font-family: 'DungGeunMo', sans-serif;}
+.DGMo {font-family: 'DungGeunMo', sans-serif !important;}
+
+@font-face {
+	font-family: 'Yeongdo-Hv';
+	src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.2/Yeongdo-Hv.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+.Yeongdo {font-family: 'Yeongdo-Hv' !important;}
+
 
 :root {
 	--rem-vw : min(calc(10 / 768 * 100vw), 10px);
@@ -109,7 +118,11 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 #intro_body .textBox {text-align: center;}
 #intro_body .textBox h2 {
 	font-size: 8rem; text-transform: uppercase;
-	color: #fff; line-height: 1; font-weight: 600;
+	line-height: 1.08; font-weight: 600;
+	background: linear-gradient(180deg, #fff 73%, #000);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
 }
 #intro_body .textBox h2 b {color: var(--Y-color);}
 #intro_body .textBox h5 {
@@ -259,7 +272,7 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 #gr_body .sec2 #education .planit .img img {width: 38rem;}
 
 /* career */
-#gr_body .sec2 #career .planit .img {left: 60rem;}
+#gr_body .sec2 #career .planit .img {left: 60rem}
 #gr_body .sec2 #career .planit .img img {width: 56.2rem;}
 #gr_body .sec2 .planit .img > a {
 	display: block; width: max(25px, 5rem); height: max(25px, 5rem);
@@ -273,6 +286,20 @@ ul,ol,li {list-style: none; padding: 0; margin: 0;}
 #gr_body .sec2 #career .planit .img > #moon-3 {top: 0rem; right: 10rem;}
 #gr_body .sec2 #career .text_box {right: unset; left: 8rem;}
 
+
+@media (max-width: 1430px) {
+	#gr_body .sec2 #career .planit .img {left: min(calc(500 / 1400 * 100vw), 500px);}
+}
+
+@media (max-width: 992px) {
+	#gr_body .sec2 #career .planit .img {left: min(calc(200 / 992 * 100vw), 200px);}
+}
+
+@media (max-width: 768px) {
+	#gr_body .sec2 .planit .img {left: 0 !important; margin: 0 auto;}
+	#gr_body .sec2 .planit .text_box {right: unset;}
+	#gr_body .sec2 #career .text_box {left: unset;}
+}
 
 
 
